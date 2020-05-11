@@ -10,6 +10,7 @@ const localSchema = new Schema({
     address: String,
     concurrency: [{
         vote: String,
+        id: String,
         time: { type: Date, default: Date.now }
     }]
 });

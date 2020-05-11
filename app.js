@@ -6,7 +6,7 @@ const { getLocals, vote } = require('./controllers/locals.js');
 
 const app = express();
 app.use(bodyParser.json())
-app.get('/:latitude/:longitude', getLocals);
+app.get('/:latitude/:longitude/:type', getLocals);
 app.post('/', vote)
 
 mongoose.connect('mongodb://localhost:27017/qless?readPreference=primary&ssl=false');
